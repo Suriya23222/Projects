@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+const apiKey = import.meta.env.VITE_API_KEY;
 
 function App() {
   const [quote, setQuote] = useState("");
@@ -10,7 +11,7 @@ const fetchQuote = async () => {
     const response = await fetch("https://api.api-ninjas.com/v1/quotes", {
       method: "GET",
       headers: {
-        "X-Api-Key": "77aI65gn9rBNnxpbBwsSrw==i9gbolJHimYfRPlZ",
+        "X-Api-Key":apiKey,
         "Content-Type": "application/json"
       }
     });
